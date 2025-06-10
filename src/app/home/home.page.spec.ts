@@ -4,8 +4,8 @@ import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 
 describe('HomePage', () => {
-  let component: HomePage;
   let fixture: ComponentFixture<HomePage>;
+  let component: HomePage;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
