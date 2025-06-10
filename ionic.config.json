@@ -1,0 +1,7 @@
+{
+  "name": "meine-vokabeltrainer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
