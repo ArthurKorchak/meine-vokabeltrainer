@@ -1,0 +1,23 @@
+{
+  "APP_TITLE": "Mein Vokabeltrainer",
+  "GENERIC": {
+    "ADD_ITEM": "Eintrag",
+    "CREATE": "Erstellen",
+    "SAVE": "Speichern",
+    "CLOSE": "Schließen",
+    "EDIT": "Bearbeiten",
+    "DELETE": "Löschen",
+    "LEARNED": "Gelernt"
+  },
+  "ITEM_MANAGE_MODAL": {
+    "EDIT_ITEM": "Eintrag bearbeiten",
+    "CREATE_ITEM": "Eintrag erstellen",
+    "ENTER_DE": "Deutsches Wort",
+    "ENTER_EN": "Englisches Wort"
+  },
+  "ITEM_STATES": {
+    "ALL": "Alle",
+    "LEARNED": "Gelernt",
+    "UNLEARNED": "Ungelernt"
+  }
+}
