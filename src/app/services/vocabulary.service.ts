@@ -32,8 +32,8 @@ export class VocabularyService {
     return vocabs;
   }
 
-  deleteVocab(item: Vocabulary): void {
-    const vocabs: Vocabulary[] = this.getVocabs().filter((vocab: Vocabulary): boolean => vocab.id !== item.id);
+  deleteVocab(id: string): void {
+    const vocabs: Vocabulary[] = this.getVocabs().filter((vocab: Vocabulary): boolean => vocab.id !== id);
     this.setVocabs(vocabs);
   }
 }

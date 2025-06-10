@@ -1,0 +1,14 @@
+<ion-item>
+  <div class="item-content">
+    <div class="item-translation">
+      <span>DE: {{ item.german }}</span>
+      <span>EN: {{ item.english }}</span>
+    </div>
+
+    <ion-row class="item-manage">
+      <ion-checkbox [(ngModel)]="item.learned" (ionChange)="changeLearned()">{{ 'GENERIC.LEARNED' | translate }}</ion-checkbox>
+      <ion-button (click)="openEditItemDialog()">{{ 'GENERIC.EDIT' | translate }}</ion-button>
+      <ion-button (click)="deleteItem()">{{ 'GENERIC.DELETE' | translate }}</ion-button>
+    </ion-row>
+  </div>
+</ion-item>

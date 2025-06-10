@@ -1,0 +1,25 @@
+<ion-segment [(ngModel)]="segment">
+  <ion-segment-button value="all">{{ 'ITEM_STATES.ALL' | translate }}</ion-segment-button>
+  <ion-segment-button value="learned">{{ 'ITEM_STATES.LEARNED' | translate }}</ion-segment-button>
+  <ion-segment-button value="unlearned">{{ 'ITEM_STATES.UNLEARNED' | translate }}</ion-segment-button>
+</ion-segment>
+
+<div [ngSwitch]="segment">
+  <ion-list *ngSwitchCase="'all'">
+    @for (item of allItems$ | async; track $index) {
+      <app-vocabulary-item [item]="item"></app-vocabulary-item>
+    }
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'learned'">
+    @for (item of learnedItems$ | async; track $index) {
+      <app-vocabulary-item [item]="item"></app-vocabulary-item>
+    }
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'unlearned'">
+    @for (item of unlearnedItems$ | async; track $index) {
+      <app-vocabulary-item [item]="item"></app-vocabulary-item>
+    }
+  </ion-list>
+</div>

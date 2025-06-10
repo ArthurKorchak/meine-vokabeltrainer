@@ -1,0 +1,26 @@
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 6px 0;
+
+  .item-translation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .item-manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    ion-checkbox {
+      width: fit-content;
+      margin-right: auto;
+    }
+  }
+}

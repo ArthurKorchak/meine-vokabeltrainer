@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="start">
+      {{ 'APP_TITLE' | translate }}
+    </ion-title>
+
+    <ion-button slot="end" (click)="openAddItemDialog()">{{ 'GENERIC.ADD_ITEM' | translate }}</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-vocabulary-list></app-vocabulary-list>
+</ion-content>

@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { VocabularyPageModule } from './pages/vocabulary/vocabulary.module';
+
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
+    path: 'vocabulary',
+    loadChildren: () => import('./pages/vocabulary/vocabulary.module').then(m => m.VocabularyPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'vocabulary',
     pathMatch: 'full'
   },
+  {
+    path: '**',
+    redirectTo: 'vocabulary',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

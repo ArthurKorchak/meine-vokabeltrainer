@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ (item ? 'ITEM_MANAGE_MODAL.EDIT_ITEM' : 'ITEM_MANAGE_MODAL.CREATE_ITEM') | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">{{ 'GENERIC.CLOSE' | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="form" class="ion-padding" [formGroup]="form">
+  <ion-item>
+    <ion-input type="text" formControlName="de" [placeholder]="'ITEM_MANAGE_MODAL.ENTER_DE' | translate"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" formControlName="en" [placeholder]="'ITEM_MANAGE_MODAL.ENTER_EN' | translate"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-button [disabled]="form.invalid || !form.touched" (click)="save()">
+      {{ (item ? 'GENERIC.SAVE' : 'GENERIC.CREATE') | translate }}
+    </ion-button>
+  </ion-row>
+</ion-content>

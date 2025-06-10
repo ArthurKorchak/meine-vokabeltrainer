@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { v4 as uuidv4 } from 'uuid';
 
 import { VocabularyService } from '../services/vocabulary.service';
 
@@ -31,7 +30,7 @@ export class VocabApiInterceptor implements HttpInterceptor {
 
     // DELETE /api/vocabs/:id
     if (req.method === 'DELETE') {
-      this.vocabularyService.deleteVocab(req.body);
+      this.vocabularyService.deleteVocab(req.urlWithParams.split('/')[3]);
       return of(new HttpResponse({ status: 204 }));
     }
 
