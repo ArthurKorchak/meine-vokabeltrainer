@@ -4,12 +4,7 @@ A mobile vocabulary trainer built with **Ionic7 + Angular17**, helping users stu
 
 Use browser devtools mobile simulation and live page https://arthurkorchak.github.io/meine-vokabeltrainer/
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="readme-imgs/1.JPG" alt="Image 1" style="width: 100%; max-width: 120px;">
-  <img src="readme-imgs/2.JPG" alt="Image 2" style="width: 100%; max-width: 120px;">
-  <img src="readme-imgs/3.JPG" alt="Image 3" style="width: 100%; max-width: 120px;">
-  <img src="readme-imgs/4.JPG" alt="Image 4" style="width: 100%; max-width: 120px;">
-</div>
+![Image](readme-imgs/1.JPG) ![Image](readme-imgs/2.JPG) ![Image](readme-imgs/3.JPG) ![Image](readme-imgs/4.JPG)
 
 ---
 
