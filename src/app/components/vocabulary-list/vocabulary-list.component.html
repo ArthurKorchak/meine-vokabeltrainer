@@ -5,19 +5,19 @@
 </ion-segment>
 
 <div [ngSwitch]="segment">
-  <ion-list *ngSwitchCase="'all'">
+  <ion-list *ngSwitchCase="'all'" id="allList">
     @for (item of allItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
   </ion-list>
 
-  <ion-list *ngSwitchCase="'learned'">
+  <ion-list *ngSwitchCase="'learned'" id="learnedList">
     @for (item of learnedItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
   </ion-list>
 
-  <ion-list *ngSwitchCase="'unlearned'">
+  <ion-list *ngSwitchCase="'unlearned'" id="unlearnedList">
     @for (item of unlearnedItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
