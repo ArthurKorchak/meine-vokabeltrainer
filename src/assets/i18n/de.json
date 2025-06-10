@@ -19,5 +19,9 @@
     "ALL": "Alle",
     "LEARNED": "Gelernt",
     "UNLEARNED": "Ungelernt"
+  },
+  "NOTIFICATIONS": {
+    "START_TO_CREATE": "Fang an, deinen Wortschatz zu erstellen",
+    "NOTHING_HERE": "Hier ist nichts..."
   }
 }

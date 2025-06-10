@@ -6,18 +6,30 @@
 
 <div [ngSwitch]="segment">
   <ion-list *ngSwitchCase="'all'" id="allList">
+    @if (!(allItems$ | async)?.length) {
+      <span class="empty-notification">{{ 'NOTIFICATIONS.START_TO_CREATE' | translate }}</span>
+    }
+
     @for (item of allItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
   </ion-list>
 
   <ion-list *ngSwitchCase="'learned'" id="learnedList">
+    @if (!(learnedItems$ | async)?.length) {
+      <span class="empty-notification">{{ 'NOTIFICATIONS.NOTHING_HERE' | translate }}</span>
+    }
+
     @for (item of learnedItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
   </ion-list>
 
   <ion-list *ngSwitchCase="'unlearned'" id="unlearnedList">
+    @if (!(unlearnedItems$ | async)?.length) {
+      <span class="empty-notification">{{ 'NOTIFICATIONS.NOTHING_HERE' | translate }}</span>
+    }
+
     @for (item of unlearnedItems$ | async; track $index) {
       <app-vocabulary-item [item]="item"></app-vocabulary-item>
     }
